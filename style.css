@@ -1,70 +1,47 @@
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: #fdfaf6;
-  overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invite</title>
+  <link rel="stylesheet" href="style.css">
 
-/* Curtain */
-.curtain {
-  position: fixed;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  background: #8b0000;
-  z-index: 10;
-}
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
 
-.left { left: 0; }
-.right { right: 0; }
+<body>
 
-/* Music button */
-.music-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  z-index: 20;
-}
+<div class="wrapper" onclick="openInvite()">
 
-/* Content */
-.container {
-  text-align: center;
-  padding: 50px 20px;
-}
+  <!-- Top text -->
+  <div class="header-text">
+    Rowan & Aly<br>
+    <span>are getting married!</span>
+  </div>
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  <!-- Envelope -->
+  <div class="envelope">
 
-.hero h1 {
-  font-size: 40px;
-  margin: 5px;
-}
+    <div class="flap"></div>
 
-.hero h2 {
-  font-size: 30px;
-}
+    <!-- Seal -->
+    <div class="seal">R&A</div>
 
-.section {
-  margin: 100px 0;
-}
+    <!-- Card -->
+    <div class="card">
+      <h2>Rowan & Aly</h2>
+      <p>request the honor of your presence</p>
+      <p class="date">30 • 10 • 2025</p>
+    </div>
 
-/* Animations */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s;
-}
+  </div>
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+  <div class="open-text">click to open...</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
