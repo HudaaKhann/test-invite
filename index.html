@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Invite</title>
+  <meta charset="UTF-8">
+  <title>Royal Invite</title>
 
-<link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
 
-<!-- Google Font (royal look) -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="scene">
+<div class="container">
 
-  <div class="top-text">
-    Rowan & Aly<br>
-    <span>are getting married</span>
+  <!-- Envelope -->
+  <div class="envelope" onclick="openInvite()">
+    <img src="assets/envelope.png" alt="">
   </div>
 
-  <div class="envelope" id="envelope">
+  <!-- Card -->
+  <div class="card" id="card">
 
-    <div class="back"></div>
-    <div class="flap"></div>
+    <!-- Emblem -->
+    <img src="assets/emblem.png" class="emblem">
 
-    <div class="seal">RA</div>
+    <!-- Frame -->
+    <img src="assets/frame.png" class="frame">
 
-    <!-- CARD -->
-    <div class="card">
-      <div class="card-inner">
+    <!-- Content -->
+    <div class="content">
+      <h2>Wedding Invitation</h2>
+      <div class="divider"></div>
 
-        <h1>Rowan & Aly</h1>
+      <p>With blessings of family</p>
 
-        <p class="invite">
-          request the honor of your presence
-        </p>
+      <h1>Revan & Ali</h1>
 
-        <div class="divider"></div>
-
-        <p class="date">30 • 10 • 2025</p>
-        <p class="venue">Grand Palace, Mumbai</p>
-
-      </div>
+      <p>Invite you to celebrate</p>
+      <p>The beginning of their journey</p>
     </div>
 
   </div>
 
-  <div class="bottom-text">click to open</div>
-
 </div>
 
-<script src="script.js"></script>
+<script>
+function openInvite() {
+  document.querySelector(".envelope").classList.add("open");
+  document.getElementById("card").classList.add("show");
+}
+</script>
 
 </body>
 </html>
