@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Royal Invite</title>
+<div class="card-wrapper">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+  <div class="card-bg"></div>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  <!-- SVG FRAME -->
+  <img src="assets/frame.svg" class="frame" />
 
-<body>
-
-<div class="container">
-
-  <!-- Envelope -->
-  <div class="envelope" onclick="openInvite()">
-    <img src="assets/envelope.png" alt="">
-  </div>
-
-  <!-- Card -->
-  <div class="card" id="card">
-
-    <!-- Emblem -->
-    <img src="assets/emblem.png" class="emblem">
-
-    <!-- Frame -->
-    <img src="assets/frame.png" class="frame">
-
-    <!-- Content -->
-    <div class="content">
-      <h2>Wedding Invitation</h2>
-      <div class="divider"></div>
-
-      <p>With blessings of family</p>
-
-      <h1>Revan & Ali</h1>
-
-      <p>Invite you to celebrate</p>
-      <p>The beginning of their journey</p>
-    </div>
-
+  <!-- CONTENT -->
+  <div class="card-content">
+    <h1>Rowan & Aly</h1>
+    <p>request the honor of your presence</p>
   </div>
 
 </div>
-
-<script>
-function openInvite() {
-  document.querySelector(".envelope").classList.add("open");
-  document.getElementById("card").classList.add("show");
-}
-</script>
-
-</body>
-</html>
