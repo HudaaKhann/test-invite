@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test Invite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invite</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Hello 👋</h1>
-<p>This is my first live test page</p>
+<!-- Curtain -->
+<div class="curtain left"></div>
+<div class="curtain right"></div>
+
+<!-- Music -->
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🔊</button>
+
+<!-- Main Content -->
+<div class="container">
+
+  <section class="hero">
+    <h1 class="fade">Sam</h1>
+    <h2 class="fade">&</h2>
+    <h1 class="fade">Sofia</h1>
+    <p class="fade">We invite you to celebrate our love</p>
+  </section>
+
+  <section class="section">
+    <h2>Wedding Ceremony</h2>
+    <p>Sunday, 20 December 2026</p>
+  </section>
+
+  <section class="section">
+    <h2>Venue</h2>
+    <p>Grand Palace, Mumbai</p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
