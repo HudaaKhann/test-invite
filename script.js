@@ -1,25 +1,23 @@
-function openInvite() {
+const tl = gsap.timeline({ paused: true });
 
-  // Seal break
-  gsap.to(".seal", {
-    scale: 0,
-    duration: 0.4
-  });
+tl.to(".seal", {
+  scale: 0,
+  duration: 0.4,
+})
 
-  // Flap open
-  gsap.to(".flap", {
-    rotateX: -180,
-    duration: 1,
-    delay: 0.3,
-    ease: "power2.inOut"
-  });
+.to(".flap", {
+  rotateX: -180,
+  duration: 1,
+  ease: "power2.inOut"
+}, "-=0.2")
 
-  // Card slide
-  gsap.to(".card", {
-    top: "-40px",
-    duration: 1.2,
-    delay: 0.8,
-    ease: "power3.out"
-  });
+.to(".card", {
+  top: "-60px",
+  duration: 1.2,
+  ease: "power3.out"
+}, "-=0.3");
 
-}
+
+document.getElementById("envelope").addEventListener("click", () => {
+  tl.play();
+});
