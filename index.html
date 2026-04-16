@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invite</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- Google Font (royal look) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body>
@@ -17,10 +20,10 @@
 
   <div class="top-text">
     Rowan & Aly<br>
-    <span>are getting married!</span>
+    <span>are getting married</span>
   </div>
 
-  <div class="envelope" onclick="openInvite()">
+  <div class="envelope" id="envelope">
 
     <div class="back"></div>
     <div class="flap"></div>
@@ -33,16 +36,13 @@
 
         <h1>Rowan & Aly</h1>
 
-        <p class="invite-text">
+        <p class="invite">
           request the honor of your presence
         </p>
-
-        <p>at their wedding celebration</p>
 
         <div class="divider"></div>
 
         <p class="date">30 • 10 • 2025</p>
-
         <p class="venue">Grand Palace, Mumbai</p>
 
       </div>
@@ -50,7 +50,7 @@
 
   </div>
 
-  <div class="bottom-text">click to open...</div>
+  <div class="bottom-text">click to open</div>
 
 </div>
 
