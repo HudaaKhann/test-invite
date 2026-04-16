@@ -2,43 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Royal Invite</title>
+  <title>Wedding Invite</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="main-container">
 
-  <!-- Envelope -->
-  <div class="envelope" id="envelope">
-    <img src="assets/envelope.svg" alt="">
+  <!-- TOP TEXT -->
+  <h1 class="title">Rowan & Aly</h1>
+  <p class="subtitle">are getting married!</p>
+
+  <!-- ENVELOPE -->
+  <div class="envelope-container" id="envelope">
+    <img src="assets/envelope.svg" class="envelope">
+
+    <!-- SEAL -->
+    <div class="seal">
+      <img src="assets/emblem.svg">
+    </div>
   </div>
 
-  <!-- Card -->
-  <div class="card" id="card">
+  <p class="click-text">click to open...</p>
+  <p class="date">30 • 10 • 2025</p>
 
-    <!-- Emblem -->
-    <img src="assets/emblem.svg" class="emblem">
+  <!-- CARD -->
+  <div class="card hidden" id="card">
 
-    <!-- Frame -->
+    <div class="card-bg"></div>
+
+    <!-- FRAME SVG -->
     <img src="assets/frame.svg" class="frame">
 
-    <!-- Content -->
-    <div class="content">
-      <h2>Wedding Invitation</h2>
-      <div class="divider"></div>
-
-      <p>With blessings of family</p>
-
-      <h1>Revan & Ali</h1>
-
-      <p>Invite you to celebrate</p>
-      <p>The beginning of their journey</p>
+    <!-- CONTENT -->
+    <div class="card-content">
+      <h2>Rowan & Aly</h2>
+      <p>request the honor of your presence</p>
     </div>
 
   </div>
@@ -46,6 +49,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
