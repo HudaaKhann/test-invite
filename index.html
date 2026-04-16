@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wedding Invite</title>
+
   <link rel="stylesheet" href="style.css">
 
   <!-- GSAP -->
@@ -12,32 +13,44 @@
 
 <body>
 
-<div class="wrapper" onclick="openInvite()">
+<div class="scene">
 
-  <!-- Top text -->
-  <div class="header-text">
+  <div class="top-text">
     Rowan & Aly<br>
     <span>are getting married!</span>
   </div>
 
-  <!-- Envelope -->
-  <div class="envelope">
+  <div class="envelope" onclick="openInvite()">
 
+    <div class="back"></div>
     <div class="flap"></div>
 
-    <!-- Seal -->
-    <div class="seal">R&A</div>
+    <div class="seal">RA</div>
 
-    <!-- Card -->
+    <!-- CARD -->
     <div class="card">
-      <h2>Rowan & Aly</h2>
-      <p>request the honor of your presence</p>
-      <p class="date">30 • 10 • 2025</p>
+      <div class="card-inner">
+
+        <h1>Rowan & Aly</h1>
+
+        <p class="invite-text">
+          request the honor of your presence
+        </p>
+
+        <p>at their wedding celebration</p>
+
+        <div class="divider"></div>
+
+        <p class="date">30 • 10 • 2025</p>
+
+        <p class="venue">Grand Palace, Mumbai</p>
+
+      </div>
     </div>
 
   </div>
 
-  <div class="open-text">click to open...</div>
+  <div class="bottom-text">click to open...</div>
 
 </div>
 
