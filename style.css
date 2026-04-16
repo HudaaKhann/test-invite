@@ -1,47 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invite</title>
-  <link rel="stylesheet" href="style.css">
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #7b1e1e;
+  color: white;
+  text-align: center;
+}
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-</head>
+/* Wrapper */
+.wrapper {
+  padding-top: 40px;
+}
 
-<body>
+/* Header */
+.header-text {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
 
-<div class="wrapper" onclick="openInvite()">
+.header-text span {
+  font-size: 18px;
+}
 
-  <!-- Top text -->
-  <div class="header-text">
-    Rowan & Aly<br>
-    <span>are getting married!</span>
-  </div>
+/* Envelope */
+.envelope {
+  width: 320px;
+  height: 220px;
+  background: #fff;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
 
-  <!-- Envelope -->
-  <div class="envelope">
+/* Flap */
+.flap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
+  transform-origin: top;
+  z-index: 3;
+}
 
-    <div class="flap"></div>
+/* Seal */
+.seal {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #b22222;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 4;
+}
 
-    <!-- Seal -->
-    <div class="seal">R&A</div>
+/* Card */
+.card {
+  position: absolute;
+  width: 90%;
+  height: 200px;
+  background: white;
+  color: #7b1e1e;
+  top: 100%;
+  left: 5%;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 1;
+}
 
-    <!-- Card -->
-    <div class="card">
-      <h2>Rowan & Aly</h2>
-      <p>request the honor of your presence</p>
-      <p class="date">30 • 10 • 2025</p>
-    </div>
+.date {
+  margin-top: 20px;
+  font-size: 18px;
+}
 
-  </div>
-
-  <div class="open-text">click to open...</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+/* Open text */
+.open-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
