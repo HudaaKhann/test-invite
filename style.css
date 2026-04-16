@@ -1,123 +1,23 @@
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: linear-gradient(#7b1e1e, #4b0f0f);
-  color: #f5eaea;
-  text-align: center;
-}
+const tl = gsap.timeline({ paused: true });
 
-/* Layout */
-.scene {
-  padding-top: 40px;
-}
+tl.to(".seal", {
+  scale: 0,
+  duration: 0.4,
+})
 
-.top-text {
-  font-size: 32px;
-}
+.to(".flap", {
+  rotateX: -180,
+  duration: 1,
+  ease: "power2.inOut"
+}, "-=0.2")
 
-.top-text span {
-  font-size: 18px;
-}
+.to(".card", {
+  top: "-60px",
+  duration: 1.2,
+  ease: "power3.out"
+}, "-=0.3");
 
-/* Envelope */
-.envelope {
-  width: 320px;
-  height: 220px;
-  margin: 40px auto;
-  position: relative;
-  perspective: 1200px;
-}
 
-/* Back */
-.back {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  position: absolute;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-}
-
-/* Flap */
-.flap {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#f5f5f5, #eaeaea);
-  clip-path: polygon(0 0, 100% 0, 50% 60%);
-  transform-origin: top;
-  z-index: 3;
-}
-
-/* Wax seal */
-.seal {
-  position: absolute;
-  top: 95px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 70px;
-  background: radial-gradient(circle at 30% 30%, #c0392b, #8b0000);
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  z-index: 4;
-  box-shadow:
-    inset -3px -5px 8px rgba(0,0,0,0.4),
-    inset 3px 3px 6px rgba(255,255,255,0.2),
-    0 5px 10px rgba(0,0,0,0.3);
-}
-
-/* Card */
-.card {
-  position: absolute;
-  width: 90%;
-  height: 280px;
-  background: #fff;
-  top: 100%;
-  left: 5%;
-  z-index: 1;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* Inner card design */
-.card-inner {
-  border: 2px solid #7b1e1e;
-  margin: 15px;
-  padding: 20px;
-  color: #7b1e1e;
-}
-
-.card h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.invite-text {
-  font-style: italic;
-}
-
-.divider {
-  width: 60%;
-  height: 1px;
-  background: #7b1e1e;
-  margin: 20px auto;
-}
-
-.date {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.venue {
-  font-size: 14px;
-}
-
-/* Bottom text */
-.bottom-text {
-  margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.8;
-}
+document.getElementById("envelope").addEventListener("click", () => {
+  tl.play();
+});
